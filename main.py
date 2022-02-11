@@ -1,3 +1,4 @@
+# Para rodar use: uvicorn main:app
 from fastapi import FastAPI
 from pydantic import BaseModel
 import traceback
@@ -10,8 +11,6 @@ from database import Database
 app = FastAPI()
 
 db = Database()
-
-# uvicorn main:app
 
 @app.get("/")
 def raiz():
